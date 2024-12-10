@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "CPasteText",
+    "version": "1.0",
+    "description": "Enable multi-copy and paste functionality.",
+    "permissions": ["clipboardRead", "clipboardWrite", "activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_title": "Enable Enhanced Copy Paste"
+    }
+}
